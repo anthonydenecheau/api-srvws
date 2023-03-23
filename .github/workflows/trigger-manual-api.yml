@@ -36,7 +36,7 @@ jobs:
       id: vars
       run: |
         echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
-        echo "::set-output name=buildimage::$(echo "${{ inputs.module }}" | sed -r 's/api/scc/g')"
+        echo "::set-output name=buildimage::$(echo anthonydenecheau/"${{ inputs.module }}" | sed -r 's/api/scc/g')"
 
     - name: Cache maven
       uses: actions/cache@v2
