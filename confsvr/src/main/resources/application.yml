@@ -16,7 +16,7 @@ spring:
       server:
         encrypt.enabled: false
         git:
-          uri: https://github.com/centrale-canine/api-config-repo
+          uri: https://github.com/anthonydenecheau/api-srvws/api-config-repo
           searchPaths: zuulservice, onlinedogshowservice, onlinedogshowdaemon, dogservice, dogdaemon, judgeservice, showservice, lofselectclubservice, icadservice, licenceservice, healthservice
           username: anthonydenecheau
           password: "{cipher}396b9d798e5277d4e04fb7943ab93f776c2b9af6f09a5ec0ba2628cac38e7acccae402e79429b1b48e732dc4a367ca2d5bdc1b4b4babb8481101301e692e3a4d"

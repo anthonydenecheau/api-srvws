@@ -5,12 +5,11 @@ on:
     branches: [ "master" ]
     paths:
       - "zipkinsvr/**"    
-#    paths-ignore:
-#      - "confsvr/**"
     
 env:
   buildimage: anthonydenecheau/scc-zipkinsvr
-
+  module: zipkinsvr
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,7 +39,7 @@ jobs:
         restore-keys: ${{ runner.os }}-m2 
           
     - name: Build with Maven
-      run: mvn clean package docker:build
+      run: mvn --projects ${{env.module}} clean package docker:build
       env:
         BUILD_NAME: ${{ steps.vars.outputs.sha_short }}   
 

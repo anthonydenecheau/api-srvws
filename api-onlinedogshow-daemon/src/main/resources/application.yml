@@ -1,0 +1,56 @@
+#Default port is 8083
+server:
+  port: 8083
+
+fixedDelay:
+  in:
+    milliseconds : "30000"
+  
+spring:
+  datasource:
+    url: "jdbc:oracle:thin:@lof:1521:LOFRE7"
+    username: "U_WEBSERVICES"
+    password: "INFPOLMDP155"
+    driver-class-name: "oracle.jdbc.OracleDriver"
+    connection-test-query: "SELECT 1 FROM DUAL"
+    testWhileIdle: "true"
+    test-on-borrow: "true"
+  jpa:
+    show-sql: "true"
+    database-platform: "org.hibernate.dialect.Oracle10gDialect"
+  cloud:
+    gcp:
+      project-id: lof-ws-test
+      credentials:
+        location: file:${GOOGLE_APPLICATION_CREDENTIALS} 
+#[Credentials file pointed to by the GOOGLE_APPLICATION_CREDENTIALS environment variable]          
+#  [Ou] https://docs.spring.io/spring-cloud-gcp/docs/1.1.0.M1/reference/html/spring-cloud-gcp-core.html
+#            encoded-key: [The value should be the base64-encoded account private key in JSON format.]              
+    stream:
+      bindings:
+        outboundDogChanges:
+            destination:  dogOdsTopic
+            content-type: application/json
+        outboundOwnerChanges:
+            destination:  ownerOdsTopic
+            content-type: application/json
+        outboundBreederChanges:
+            destination:  breederOdsTopic
+            content-type: application/json
+        outboundTitleChanges:
+            destination:  titleOdsTopic
+            content-type: application/json
+        outboundPedigreeChanges:
+            destination:  pedigreeOdsTopic
+            content-type: application/json
+        outboundParentChanges:
+            destination:  parentOdsTopic
+            content-type: application/json
+          
+#Setting the logging levels for the service
+logging:
+  level:
+    com.netflix: WARN
+    org.springframework.web: WARN
+    com.scc: DEBUG      
+    

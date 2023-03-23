@@ -1,0 +1,13 @@
+example.property: "I AM IN THE DEFAULT"
+
+spring.datasource.url: "jdbc:oracle:thin:@lof:1521:LOFRE7"
+spring.datasource.username: "U_WEBSERVICES"
+spring.datasource.password: "{cipher}769f20784b6171d5d2e9b330a0e6dbd937fe0a6597bb5d6c35eea14b1fa89398"
+spring.datasource.driver-class-name: "oracle.jdbc.OracleDriver"
+spring.datasource.connection-test-query: "SELECT 1 FROM DUAL"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.test-on-borrow: "true"
+spring.jpa.show-sql: "true"
+spring.jpa.database-platform: "org.hibernate.dialect.Oracle10gDialect"
+
+fixedDelay.in.milliseconds : "30000"

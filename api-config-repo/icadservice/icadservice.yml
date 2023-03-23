@@ -1,0 +1,24 @@
+example.property: "I AM IN THE DEFAULT"
+
+authentification.keys[0]: "{cipher}e566ed1409a174e3f9ef02629e23fedf366fc2e6de006ecd5f8337b2ba83aca97d20608d4c541967b5f1e21a18131515"
+authentification.value: "{cipher}679a9499b52e254f97b822f0847082d7c023a15bcd4fc0cda1b41f77478b4b52"
+
+spring.datasource.url: "jdbc:oracle:thin:@lof:1521/LOFREC"
+spring.datasource.username: "U_LOF"
+spring.datasource.password: "{cipher}bb319b93b1d299cbe4680aef3cdf393bb401ff7c7dc7e0fd46542740a0b46fc5"
+spring.datasource.driver-class-name: "oracle.jdbc.OracleDriver"
+spring.datasource.connection-test-query: "SELECT 1 FROM DUAL"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.test-on-borrow: "true"
+spring.jpa.show-sql: "true"
+spring.jpa.database-platform: "org.hibernate.dialect.Oracle10gDialect"
+
+hystrix.command.icadservice.execution.isolation.thread.timeoutInMilliseconds: 10000
+icadservice.ribbon.ReadTimeout: 10000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+
+eureka.client.healthcheck.enabled: true
+
+fixedDelay.in.milliseconds : "30000"

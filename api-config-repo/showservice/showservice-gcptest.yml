@@ -1,0 +1,24 @@
+example.property: "I AM IN THE DEFAULT"
+
+authentification.keys[0]: "{cipher}ebc2fbf7c17b70f0eaa3f62238656830fe66f36d6aaa826962ffdccc4aed6c8d7d26ad27f0f38a2e6c6f0fb8b30d5f30"
+authentification.value: "{cipher}679a9499b52e254f97b822f0847082d7c023a15bcd4fc0cda1b41f77478b4b52"
+
+spring.cloud.gcp.projectId: lof-ws-test
+spring.cloud.gcp.credentials.location: file:${GOOGLE_APPLICATION_CREDENTIALS}      
+spring.cloud.gcp.sql.databaseName: "{cipher}58dcfbdd2c5b2d1c3ba75de285c930c4c9d9df6c7b460e32e3a4e84c6c9c5224"
+spring.cloud.gcp.sql.instance-connection-name: "{cipher}f86fb4b5a33dc5d5706fac328fe0d0414b15ddef3b1ad4a28ad27f24271bb848042731ff6bfd860a45b9f24badea242f0aabea0962d42844673174284d1d3e85"
+
+spring.datasource.username: "show_b"
+spring.datasource.password: "{cipher}a8bf01fc277ec143159f8f8a2f9e9ace48dd25b55c1579ec855ad90ac5bd7a193646c7f423719917f15ddcaa6dc486b1b88b1ed596c46cbf2cf99194ee61aca1"
+# Nécessaire pour être compatbile avec le profile default
+# Si pas d'environnement debian == facultatif
+#spring.datasource.url: jdbc:postgresql://google/${spring.cloud.gcp.sql.databaseName}?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=${spring.cloud.gcp.sql.instance-connection-name}&useSSL=false
+#spring.datasource.url: jdbc:postgresql://10.116.48.4/${spring.cloud.gcp.sql.databaseName}?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=${spring.cloud.gcp.sql.instance-connection-name}&useSSL=false
+spring.datasource.url: "jdbc:postgresql://10.155.176.31:5432/show_b"
+
+hystrix.command.showservice.execution.isolation.thread.timeoutInMilliseconds: 7000
+showservice.ribbon.ReadTimeout: 7000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+eureka.client.healthcheck.enabled: true

@@ -1,0 +1,24 @@
+example.property: "I AM IN THE DEFAULT"
+authentification.keys[0]: "{cipher}d3e8e396c6309c512c27fd251ee44df8de18502f804c9f211d73ed6a89e30f61d405680c7c4c348278a0f418344100a4"
+authentification.keys[1]: "{cipher}171bde8adfa44bf3c77613f2a2f8dd109e76ecea03fa48bc38510e902a377715f3f3e859cd892d15c3131a57cfc56c96"
+authentification.keys[2]: "{cipher}ebc2fbf7c17b70f0eaa3f62238656830fe66f36d6aaa826962ffdccc4aed6c8d7d26ad27f0f38a2e6c6f0fb8b30d5f30"
+authentification.keys[3]: "{cipher}eb5263d70faf538d3d2c68cd3c88860282f4eae46480961676b8624b5123e490f97b41a06fb2c4e0a61ddc26d378384f"
+authentification.keys[4]: "{cipher}d4c0e8436d35ceb2ba84715792add96bc241854b461a5157d94e09e47452be58f1931e9e129542e78c446c41cb2a4b54"
+authentification.value: "{cipher}679a9499b52e254f97b822f0847082d7c023a15bcd4fc0cda1b41f77478b4b52"
+spring.jpa.database: "POSTGRESQL"
+spring.datasource.platform:  "postgres"
+spring.jpa.show-sql: "true"
+spring.database.driverClassName: "org.postgresql.Driver"
+spring.datasource.url: "jdbc:postgresql://database:5432/ws_dev"
+spring.datasource.username: "ws_dev"
+spring.datasource.password: "{cipher}fbc1940aff7b89f028f47aeba44a8f318c87e095bcee1b3d3b165c2a0e922a4b"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+
+hystrix.command.dogservice.execution.isolation.thread.timeoutInMilliseconds: 30000
+dogservice.ribbon.ReadTimeout: 30000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+eureka.client.healthcheck.enabled: true

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: onlinedogshowservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+      
+  

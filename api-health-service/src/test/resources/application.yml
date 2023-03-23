@@ -1,0 +1,28 @@
+eureka:
+  client:
+    enabled: false  
+    
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+
+example:
+  property: "I AM IN THE DEFAULT"
+
+authentification:
+  key[0]: "myPersonalKey"
+  value: "01/01/2057"
+  
+myPacs:
+  accessToken: "myToken"
+  url:
+    api: ""
+    report: ""
+  
+base:
+  repository:
+    server: "myServer"  
+    login: "login"  
+    password: "password"          

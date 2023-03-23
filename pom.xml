@@ -11,7 +11,20 @@
 
 	<modules>
 		<module>confsvr</module>
+		<module>eurekasvr</module>
+		<module>zuulsvr</module>		
 		<module>zipkinsvr</module>
+		
+		<module>api-judge-service</module>
+		<module>api-lofselectclub-service</module>
+		<module>api-licence-service</module>
+		<module>api-health-service</module>
+		<module>api-onlinedogshow-daemon</module>
+		<module>api-onlinedogshow-service</module>
+		<module>api-dog-daemon</module>
+		<module>api-dog-service</module>
+		<module>api-show-service</module>
+		<module>api-icad-service</module>
 	</modules>
 
 	<parent>
@@ -36,7 +49,7 @@
 		<java.version>1.8</java.version>
 		<tomcat.version>8.5.87</tomcat.version>
 	</properties>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -49,4 +62,5 @@
 			<version>${tomcat.version}</version><!--$NO-MVN-MAN-VER$ -->
 		</dependency>
 	</dependencies>
+	
 </project>

@@ -1,0 +1,20 @@
+example.property: "I AM IN THE DEFAULT"
+authentification.key: "{cipher}171bde8adfa44bf3c77613f2a2f8dd109e76ecea03fa48bc38510e902a377715f3f3e859cd892d15c3131a57cfc56c96"
+authentification.value: "{cipher}a4b75b51132aebd47a8f3c2faa933d1908eb54735f7dce64951a33636d24c200"
+spring.jpa.database: "POSTGRESQL"
+spring.datasource.platform:  "postgres"
+spring.jpa.show-sql: "true"
+spring.database.driverClassName: "org.postgresql.Driver"
+spring.datasource.url: "jdbc:postgresql://database:5432/ods_prod"
+spring.datasource.username: "ods_prod"
+spring.datasource.password: "{cipher}5bbb2622dc2d182d36854ee04b09ca1b0e17c166eba0f2990fd8e9a00e0f665e"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+
+hystrix.command.onlinedogshowservice.execution.isolation.thread.timeoutInMilliseconds: 7000
+onlinedogshowservice.ribbon.ReadTimeout: 7000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+eureka.client.healthcheck.enabled: true

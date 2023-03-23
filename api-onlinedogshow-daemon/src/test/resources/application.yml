@@ -1,0 +1,56 @@
+eureka:
+  client:
+    enabled: false  
+
+spring:
+  jpa:
+    properties:
+      hibernate:  
+        dialect: "org.hibernate.dialect.H2Dialect"
+  datasource:
+    url: jdbc:h2:mem:db;Mode=Oracle
+    username: sa  
+    password: sa
+    platform: h2
+    continue-on-error: true
+  cloud:
+    gcp:
+# [The project ID specified by the GOOGLE_CLOUD_PROJECT environment variable]
+      project-id : lof-ws-test
+      credentials:
+           location: file:${GOOGLE_APPLICATION_CREDENTIALS} #[Credentials file pointed to by the GOOGLE_APPLICATION_CREDENTIALS environment variable]          
+#  [Ou] https://docs.spring.io/spring-cloud-gcp/docs/1.1.0.M1/reference/html/spring-cloud-gcp-core.html
+#            encoded-key: [The value should be the base64-encoded account private key in JSON format.]            
+    stream:
+      bindings:
+        outboundDogChanges:
+            destination:  dogOdsTopic
+            content-type: application/json
+        outboundOwnerChanges:
+            destination:  ownerOdsTopic
+            content-type: application/json
+        outboundBreederChanges:
+            destination:  breederOdsTopic
+            content-type: application/json
+        outboundTitleChanges:
+            destination:  titleOdsTopic
+            content-type: application/json
+        outboundPedigreeChanges:
+            destination:  pedigreeOdsTopic
+            content-type: application/json
+        outboundParentChanges:
+            destination:  parentOdsTopic
+            content-type: application/json
+#Kafka settings
+#      kafka:
+#        binder:
+#          zkNodes: localhost
+#          brokers: localhost
+#          autoCreateTopics: true
+          
+example:
+  property: "I AM IN THE DEFAULT"
+
+fixedDelay:
+  in:
+    milliseconds : "30000"

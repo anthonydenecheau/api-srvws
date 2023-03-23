@@ -1,0 +1,24 @@
+example.property: "I AM IN THE DEFAULT"
+authentification.keys[0]: "{cipher}ea181ce358ef2ad4d84444c1d7c07258cfd783fbc9d124e2ca7af21475e869e711f27e02736e3eb2daaf27cc5b7fe3a0"
+authentification.value: "{cipher}679a9499b52e254f97b822f0847082d7c023a15bcd4fc0cda1b41f77478b4b52"
+spring.jpa.database: "POSTGRESQL"
+spring.datasource.platform:  "postgres"
+spring.jpa.show-sql: "false"
+spring.database.driverClassName: "org.postgresql.Driver"
+spring.datasource.url: "jdbc:postgresql://database:5432/lofselectclub_prod"
+spring.datasource.username: "lofselectclub_prod"
+spring.datasource.password: "{cipher}80afa3c4b763262776ac1079439db77e79c196ff86cb50f558413d075159bf53021d4f7d266cb63a49b948407bad0c02"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.validationQuery: "SELECT 1"
+spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+
+breeder.limitTopNAffix: 20
+parent.limitTopNFathers: 20
+
+hystrix.command.lofselectclubservice.execution.isolation.thread.timeoutInMilliseconds: 7000
+lofselectclubservice.ribbon.ReadTimeout: 7000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+eureka.client.healthcheck.enabled: true
+

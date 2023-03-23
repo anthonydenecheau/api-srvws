@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: lofselectclubservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+      
+  

@@ -1,0 +1,27 @@
+example.property: "I AM IN THE DEFAULT"
+
+authentification.keys[0]: "{cipher}ea181ce358ef2ad4d84444c1d7c07258cfd783fbc9d124e2ca7af21475e869e711f27e02736e3eb2daaf27cc5b7fe3a0"
+authentification.value: "{cipher}679a9499b52e254f97b822f0847082d7c023a15bcd4fc0cda1b41f77478b4b52"
+
+spring.cloud.gcp.projectId: lof-ws-test
+spring.cloud.gcp.credentials.location: file:${GOOGLE_APPLICATION_CREDENTIALS}      
+spring.cloud.gcp.sql.databaseName: "{cipher}58dcfbdd2c5b2d1c3ba75de285c930c4c9d9df6c7b460e32e3a4e84c6c9c5224"
+spring.cloud.gcp.sql.instance-connection-name: "{cipher}f86fb4b5a33dc5d5706fac328fe0d0414b15ddef3b1ad4a28ad27f24271bb848042731ff6bfd860a45b9f24badea242f0aabea0962d42844673174284d1d3e85"
+
+spring.datasource.username: "lofselectclub_g"
+spring.datasource.password: "{cipher}8d6f7b765efc0df55d362bb217d97909f80de0e63faab0a2736e2eee0f51a7dc7108e778f2e00911a3b1292ef90bcf78bc4290cd3e873185f1c41675587d899b"
+# Nécessaire pour être compatbile avec le profile default
+# Si pas d'environnement debian == facultatif
+#spring.datasource.url: jdbc:postgresql://google/${spring.cloud.gcp.sql.databaseName}?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=${spring.cloud.gcp.sql.instance-connection-name}&useSSL=false
+#spring.datasource.url: jdbc:postgresql://10.116.48.4/${spring.cloud.gcp.sql.databaseName}?socketFactory=com.google.cloud.sql.postgres.SocketFactory&cloudSqlInstance=${spring.cloud.gcp.sql.instance-connection-name}&useSSL=false
+spring.datasource.url: "jdbc:postgresql://10.155.176.47:5432/lofselectclub_g"
+
+breeder.limitTopNAffix: 20
+parent.limitTopNFathers: 20
+
+hystrix.command.lofselectclubservice.execution.isolation.thread.timeoutInMilliseconds: 7000
+lofselectclubservice.ribbon.ReadTimeout: 7000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+eureka.client.healthcheck.enabled: true

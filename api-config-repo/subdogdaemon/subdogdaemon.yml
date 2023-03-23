@@ -1,0 +1,13 @@
+example.property: "I AM IN THE DEFAULT"
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring.datasource.url: "jdbc:postgresql://database:5432/ws_dev"
+spring.datasource.username: "ws_dev"
+spring.datasource.password: "{cipher}fbc1940aff7b89f028f47aeba44a8f318c87e095bcee1b3d3b165c2a0e922a4b"
+spring.datasource.driver-class-name: "org.postgresql.Driver"
+spring.datasource.hikari.connection-test-query: "SELECT 1"
+
+# The SQL dialect makes Hibernate generate better SQL for the chosen database
+spring.jpa.database-platform : "org.hibernate.dialect.PostgreSQL9Dialect"
+spring.jpa.show-sql: "true"
+spring.jpa.properties.hibernate.temp.use_jdbc_metadata_defaults: "false"

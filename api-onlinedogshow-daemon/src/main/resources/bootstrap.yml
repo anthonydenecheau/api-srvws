@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: onlinedogshowdaemon
+  profiles:
+    active:
+      default
+  

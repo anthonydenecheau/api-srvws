@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: icadservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+      
+  

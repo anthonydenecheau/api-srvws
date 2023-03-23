@@ -1,0 +1,32 @@
+example.property: "I AM IN THE DEFAULT"
+
+authentification.keys[0]: "{cipher}390ef0c57fc53e677008c1f1f011e4ab8cc42006a1bf38c230283fc97ae197c72b2a76fb60596b75772b821ba201b304"
+authentification.value: "{cipher}679a9499b52e254f97b822f0847082d7c023a15bcd4fc0cda1b41f77478b4b52"
+
+myPacs.accessToken: "{cipher}9842151502c9da0404ceffeca118e68176e6b6e67e673e78271d146849133d13fa270ecdbb3ebea9bbc5d45f11469cb28fffaf16c222b62ae3b0e10a8800c2004b656f4f6dac79b8a318319ab11e113974adfecb54a9e2046dad7e2214f332638bb1de134a2b010b2c447f5f77d20ca9160ace2decb75291cd5ffac8d582bc029ce61dd74887362ad8f30b4a53a10b2b53f58a190a07a0615547325806f79ebc"
+myPacs.url.api: "{cipher}1ce2ac2fadaddcc4b63a2cd8f8bbba19b3156079b8b625e6e35dc1443b5727c787ab3e3024115c46dc5c48cc205c5d0aa88aeeb1e3d5eeb15a41faa7d8d37f64"
+myPacs.url.report: "{cipher}602579b24b6910b7875030e6bd672ef53d7d7e031f5c99de4d06ca2d5f2f4e7e2255c1eb91ba3ba7d13365ca4bdcdefb"
+
+base.repository.server: "{cipher}6322f0b1092601dd6709817d55caef6d0d8b40e04279b06306adb22b94ad464b"  
+base.repository.login: "{cipher}64540e884f6ff2286f16d0c8ea7ba1bbaca1d84572089426a23d9c104b701b18"  
+base.repository.password: "{cipher}ece15227dcf51d43b9fa7aec8d7536295d65d8a5c8b7d79042a66d0ec6f636d562a3ba9a825175a5cb488a51721f849c"  
+
+spring.datasource.url: "jdbc:oracle:thin:@lof:1521/LOFREC"
+spring.datasource.username: "U_LOF"
+spring.datasource.password: "{cipher}bb319b93b1d299cbe4680aef3cdf393bb401ff7c7dc7e0fd46542740a0b46fc5"
+spring.datasource.driver-class-name: "oracle.jdbc.OracleDriver"
+spring.datasource.connection-test-query: "SELECT 1 FROM DUAL"
+spring.datasource.testWhileIdle: "true"
+spring.datasource.test-on-borrow: "true"
+spring.jpa.show-sql: "true"
+spring.jpa.database-platform: "org.hibernate.dialect.Oracle10gDialect"
+
+hystrix.command.healthservice.execution.isolation.thread.timeoutInMilliseconds: 10000
+healthservice.ribbon.ReadTimeout: 10000
+
+eureka.instance.leaseExpirationDurationInSeconds: 30 
+eureka.instance.leaseRenewalIntervalInSeconds: 10
+
+eureka.client.healthcheck.enabled: true
+
+fixedDelay.in.milliseconds : "30000"

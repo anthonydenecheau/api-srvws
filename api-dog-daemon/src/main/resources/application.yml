@@ -1,0 +1,42 @@
+#Default port is 8084
+server:
+  port: 8084
+  
+spring:
+#Kafka settings
+  cloud:
+    stream:
+      bindings:
+        outboundDogChanges:
+            destination:  dogDogTopic
+            content-type: application/json
+        outboundOwnerChanges:
+            destination:  ownerDogTopic
+            content-type: application/json
+        outboundBreederChanges:
+            destination:  breederDogTopic
+            content-type: application/json
+        outboundTitleChanges:
+            destination:  titleDogTopic
+            content-type: application/json
+        outboundPedigreeChanges:
+            destination:  pedigreeDogTopic
+            content-type: application/json
+        outboundParentChanges:
+            destination:  parentDogTopic
+            content-type: application/json
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+          autoCreateTopics: true
+  
+#Setting the logging levels for the service
+#Migrate to logstach and Cloud Config
+#logging:
+#  level:
+#    com.netflix: WARN
+#    org.springframework.web: WARN
+#    com.scc: DEBUG     
+#    org.apache.kafka: WARN 
+    

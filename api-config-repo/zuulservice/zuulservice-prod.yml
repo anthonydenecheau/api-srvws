@@ -1,0 +1,18 @@
+zuul.ignored-services: "*"
+zuul.prefix:  /api
+zuul.routes.onlinedogshowservice: /ods/**
+zuul.routes.dogservice: /dog/**
+zuul.routes.judgeservice: /judge/**
+zuul.routes.showservice: /show/**
+zuul.routes.lofselectclubservice: /lofselectclub/**
+zuul.routes.icadservice: /identification/**
+zuul.routes.licenceservice: /licence/**
+
+zuul.debug.request: true
+
+#default hystrix conf.
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2500
+
+# authentification properties
+authentification.max.attempt: -1  # try (-1 : disable)
+authentification.recovery.attempt: 5 # min

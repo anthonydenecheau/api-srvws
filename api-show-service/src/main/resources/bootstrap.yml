@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: showservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true
+      
+  
