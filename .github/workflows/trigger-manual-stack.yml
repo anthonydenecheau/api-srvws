@@ -20,7 +20,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build & Push Manually
+    name: Build & Push Manually ${{ inputs.module }}
     env:
       MVN: mvn --show-version --batch-mode
 
