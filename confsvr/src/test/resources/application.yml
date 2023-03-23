@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    config:
+      server:
+        encrypt.enabled: false
+        git:
+          uri: https://github.com/anthonydenecheau/config-repo
+          searchPaths: zuulservice, onlinedogshowservice, onlinedogshowdaemon, dogservice, dogdaemon, judgeservice, showservice, lofselectclubservice
+          username: anthonydenecheau
+          password: "{cipher}39929a669a72a5943055a852c45e1fe4272942aa34f4d64f5be383f93d7c5da8"
+  
