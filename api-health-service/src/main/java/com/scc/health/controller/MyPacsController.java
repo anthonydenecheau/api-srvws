@@ -89,7 +89,7 @@ public class MyPacsController {
       HttpEntity<ActivateEventObject> request = new HttpEntity<ActivateEventObject>(
             new ActivateEventObject(event.getIsPaid(), event.getReviewerOrdinalNumbers()));
       ResponseEntity<StudyObject> response = restTemplate.exchange(urlMyPacsApi + "/study/" + reference + "/payment",
-            HttpMethod.POST, request, StudyObject.class);
+            HttpMethod.PATCH, request, StudyObject.class);
       return (StudyObject) response.getBody();
    }
 
